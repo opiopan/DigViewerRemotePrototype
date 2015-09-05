@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBb-Aq-Fxm">
+                                <rect key="frame" x="-4" y="556" width="608" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="r8A-Wn-9o0"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="HPy-dm-Ukg"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3qG-Xn-366">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="556"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XBb-Aq-Fxm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="8Vo-sV-PDV"/>
+                            <constraint firstItem="XBb-Aq-Fxm" firstAttribute="top" secondItem="3qG-Xn-366" secondAttribute="bottom" id="AKf-2q-OIE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XBb-Aq-Fxm" secondAttribute="bottom" id="Wax-t7-q81"/>
+                            <constraint firstItem="3qG-Xn-366" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="g4m-os-uPc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XBb-Aq-Fxm" secondAttribute="trailing" constant="-20" id="qMu-oe-fxn"/>
+                            <constraint firstItem="3qG-Xn-366" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="vWQ-4I-RGR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3qG-Xn-366" secondAttribute="trailing" constant="-20" id="xwo-ek-ezg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="3qG-Xn-366" id="ddx-Ly-oSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

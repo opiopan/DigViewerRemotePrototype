@@ -14,6 +14,10 @@
 		7B6ADFFD1B99D09300FA0335 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6ADFFC1B99D09300FA0335 /* Images.xcassets */; };
 		7B6AE0001B99D09300FA0335 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6ADFFE1B99D09300FA0335 /* LaunchScreen.xib */; };
 		7B6AE00C1B99D09300FA0335 /* DigViewerRemotePrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AE00B1B99D09300FA0335 /* DigViewerRemotePrototypeTests.m */; };
+		7B6AE0161B99D16000FA0335 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6AE0151B99D16000FA0335 /* MapKit.framework */; };
+		7B6AE02C1B9B1DFC00FA0335 /* DVRemoteClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AE0251B9B1DFC00FA0335 /* DVRemoteClient.m */; };
+		7B6AE02D1B9B1DFC00FA0335 /* DVRemoteProtcol.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AE0271B9B1DFC00FA0335 /* DVRemoteProtcol.m */; };
+		7B6AE02F1B9B1DFC00FA0335 /* DVRemoteSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AE02B1B9B1DFC00FA0335 /* DVRemoteSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		7B6AE0051B99D09300FA0335 /* DigViewerRemotePrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigViewerRemotePrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6AE00A1B99D09300FA0335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B6AE00B1B99D09300FA0335 /* DigViewerRemotePrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigViewerRemotePrototypeTests.m; sourceTree = "<group>"; };
+		7B6AE0151B99D16000FA0335 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7B6AE0241B9B1DFC00FA0335 /* DVRemoteClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRemoteClient.h; sourceTree = "<group>"; };
+		7B6AE0251B9B1DFC00FA0335 /* DVRemoteClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRemoteClient.m; sourceTree = "<group>"; };
+		7B6AE0261B9B1DFC00FA0335 /* DVRemoteProtcol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRemoteProtcol.h; sourceTree = "<group>"; };
+		7B6AE0271B9B1DFC00FA0335 /* DVRemoteProtcol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRemoteProtcol.m; sourceTree = "<group>"; };
+		7B6AE02A1B9B1DFC00FA0335 /* DVRemoteSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRemoteSession.h; sourceTree = "<group>"; };
+		7B6AE02B1B9B1DFC00FA0335 /* DVRemoteSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRemoteSession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6AE0161B99D16000FA0335 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,7 @@
 		7B6ADFE31B99D09300FA0335 = {
 			isa = PBXGroup;
 			children = (
+				7B6AE0151B99D16000FA0335 /* MapKit.framework */,
 				7B6ADFEE1B99D09300FA0335 /* DigViewerRemotePrototype */,
 				7B6AE0081B99D09300FA0335 /* DigViewerRemotePrototypeTests */,
 				7B6ADFED1B99D09300FA0335 /* Products */,
@@ -81,6 +94,7 @@
 		7B6ADFEE1B99D09300FA0335 /* DigViewerRemotePrototype */ = {
 			isa = PBXGroup;
 			children = (
+				7B6AE0301B9B1E6900FA0335 /* DV Remote Protcol */,
 				7B6ADFF31B99D09300FA0335 /* AppDelegate.h */,
 				7B6ADFF41B99D09300FA0335 /* AppDelegate.m */,
 				7B6ADFF61B99D09300FA0335 /* ViewController.h */,
@@ -117,6 +131,19 @@
 				7B6AE00A1B99D09300FA0335 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B6AE0301B9B1E6900FA0335 /* DV Remote Protcol */ = {
+			isa = PBXGroup;
+			children = (
+				7B6AE0261B9B1DFC00FA0335 /* DVRemoteProtcol.h */,
+				7B6AE0271B9B1DFC00FA0335 /* DVRemoteProtcol.m */,
+				7B6AE0241B9B1DFC00FA0335 /* DVRemoteClient.h */,
+				7B6AE0251B9B1DFC00FA0335 /* DVRemoteClient.m */,
+				7B6AE02A1B9B1DFC00FA0335 /* DVRemoteSession.h */,
+				7B6AE02B1B9B1DFC00FA0335 /* DVRemoteSession.m */,
+			);
+			name = "DV Remote Protcol";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6AE02C1B9B1DFC00FA0335 /* DVRemoteClient.m in Sources */,
 				7B6ADFF81B99D09300FA0335 /* ViewController.m in Sources */,
 				7B6ADFF51B99D09300FA0335 /* AppDelegate.m in Sources */,
+				7B6AE02F1B9B1DFC00FA0335 /* DVRemoteSession.m in Sources */,
 				7B6ADFF21B99D09300FA0335 /* main.m in Sources */,
+				7B6AE02D1B9B1DFC00FA0335 /* DVRemoteProtcol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +448,7 @@
 				7B6AE0111B99D09300FA0335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B6AE0121B99D09300FA0335 /* Build configuration list for PBXNativeTarget "DigViewerRemotePrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +457,7 @@
 				7B6AE0141B99D09300FA0335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
